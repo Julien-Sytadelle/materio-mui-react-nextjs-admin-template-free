@@ -2,7 +2,7 @@
 import { ElementType, ReactNode } from 'react'
 
 // ** Next Imports
-import Link from 'next/link'
+import Link from 'src/@core/components/Link'
 import { useRouter } from 'next/router'
 
 // ** MUI Imports
@@ -83,7 +83,7 @@ const VerticalNavLink = ({ item, navVisible, toggleNavVisibility }: Props) => {
       disabled={item.disabled || false}
       sx={{ mt: 1.5, px: '0 !important' }}
     >
-      <Link passHref href={item.path === undefined ? '/' : `${item.path}`}>
+      <Link href={item.path === undefined ? '/' : `${item.path}`}>
         <MenuNavLink
           component={'a'}
           className={isNavLinkActive() ? 'active' : ''}

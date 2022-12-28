@@ -2,7 +2,7 @@
 import { ReactNode } from 'react'
 
 // ** Next Import
-import Link from 'next/link'
+import Link from 'src/@core/components/Link'
 
 // ** MUI Imports
 import Box, { BoxProps } from '@mui/material/Box'
@@ -59,7 +59,7 @@ const VerticalNavHeader = (props: Props) => {
       {userVerticalNavMenuBranding ? (
         userVerticalNavMenuBranding(props)
       ) : (
-        <Link href='/' passHref>
+        <Link href='/'>
           <StyledLink>
             <svg
               width={30}

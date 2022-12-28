@@ -2,7 +2,7 @@
 import { ReactNode } from 'react'
 
 // ** Next Import
-import Link from 'next/link'
+import Link from 'src/@core/components/Link'
 
 // ** MUI Components
 import Button from '@mui/material/Button'
@@ -58,7 +58,7 @@ const Error500 = () => {
           <Typography variant='body2'>Oops, something went wrong!</Typography>
         </BoxWrapper>
         <Img height='487' alt='error-illustration' src='/images/pages/500.png' />
-        <Link passHref href='/'>
+        <Link href='/'>
           <Button component='a' variant='contained' sx={{ px: 5.5 }}>
             Back to Home
           </Button>
