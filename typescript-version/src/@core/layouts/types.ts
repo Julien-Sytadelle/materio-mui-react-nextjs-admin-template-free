@@ -1,9 +1,12 @@
 import { ReactNode } from 'react'
+import SvgIcon from '@mui/material/SvgIcon'
 import { Settings } from 'src/@core/context/settingsContext'
 
 export type ContentWidth = 'full' | 'boxed'
 
 export type ThemeColor = 'primary' | 'secondary' | 'error' | 'warning' | 'info' | 'success'
+
+export type SvgIconComponent = typeof SvgIcon
 
 export type NavLink = {
   path?: string
@@ -14,7 +17,7 @@ export type NavLink = {
   badgeContent?: string
   externalLink?: boolean
   openInNewTab?: boolean
-  icon?: string | string[] | ReactNode
+  icon?: string | string[] | ReactNode | SvgIconComponent
   badgeColor?: 'default' | 'primary' | 'secondary' | 'success' | 'error' | 'warning' | 'info'
 }
 
