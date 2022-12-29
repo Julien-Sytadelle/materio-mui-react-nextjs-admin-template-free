@@ -99,7 +99,12 @@ const Navigation = (props: Props) => {
     }
   }
 
-  const ScrollWrapper = hidden ? Box : PerfectScrollbar
+  const NoContainerRefBox = (props: any) => {
+    const { containerRef, ...rest} = props;
+    return <Box {...rest} />
+  }
+
+  const ScrollWrapper = hidden ? NoContainerRefBox : PerfectScrollbar
 
   return (
     <Drawer {...props}>
